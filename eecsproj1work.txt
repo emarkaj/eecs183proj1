@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  int people = 0;
+  cout << "How many people do you want to serve?" << endl;
+  cin >> people;
+  cout << endl;
+  
+  const double peoplePerLoaf = 4.0;
+  int loaves = ceil(people / peoplePerLoaf);
+  
+  cout << "You need to make: " << loaves << " loaves of focaccia" << endl; 
+  
+    const double flourCupsPerLoaf = 5.0;
+    const double flourCupsPerBag = 20.0;
+    int flourBags = ceil(loaves / (flourCupsPerBag / flourCupsPerLoaf));
+    cout << "You will need: " << flourBags << " bags of flour, " << endl;
+  
+  return 0;
+}
